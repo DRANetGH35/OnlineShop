@@ -1,7 +1,6 @@
 import socket
 from app import create_app
 
-
 app = create_app()
 
 from routes import *
@@ -21,5 +20,5 @@ def get_ip():
 
 
 if __name__ == '__main__':
-    app.run(debug=True, port=5002)
+    app.run(debug=True, port=5002, host=get_ip())
     #                              host='192.168.86.53'
