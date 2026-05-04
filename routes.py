@@ -12,8 +12,8 @@ def index():
 
 @app.route('/add_to_cart/<product_id>')
 def add_to_cart(product_id):
-    if not session['cart'][product_id]:
-        session['cart'][product_id] = 1234
+    if not session['cart']['product_id']:
+        session['cart']['product_id'] = product_id
     else:
         session['cart'][product_id] = session['cart'][product_id] + 1
 
