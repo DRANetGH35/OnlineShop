@@ -18,7 +18,8 @@ def get_ip():
         s.close()
     return IP
 
+ip = get_ip()
 
 if __name__ == '__main__':
-    app.run(debug=True, port=5002, host=get_ip())
+    app.run(debug=True, port=5002, host=ip)
     #                              host='192.168.86.53'
